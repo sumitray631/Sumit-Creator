@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - Sumit Creator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo-text span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 8px 5px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        nav ul li a.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Main Content */
+        main {
+            min-height: calc(100vh - 200px);
+            padding: 40px 0;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .page-header p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .terms-content {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .terms-content h2 {
+            color: var(--primary);
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(74, 111, 165, 0.1);
+        }
+        
+        .terms-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .terms-content h3 {
+            color: var(--secondary);
+            margin: 25px 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .terms-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .terms-content ul, .terms-content ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .terms-content li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .last-updated {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .last-updated strong {
+            color: var(--primary);
+        }
+        
+        .important-note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #b0b7c3;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #b0b7c3;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .terms-content {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .terms-content {
+                padding: 25px;
+            }
+            
+            .footer-column {
+                min-width: 100%;
+                padding-right: 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .terms-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">SC</div>
+                    <div class="logo-text">Sumit <span>Creator</span></div>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sapk.html" target="_blank">SApk</a></li>
+                        <li><a href="about.html" target="_blank">About</a></li>
+                        <li><a href="tach.html" target="_blank">Tach</a></li>
+                        <li><a href="edition.html" target="_blank">Edition</a></li>
+                        <li><a href="ai-edit.html" target="_blank">AI Edit</a></li>
+                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1>Terms & Conditions</h1>
+                <p>Terms governing the use of Sumit Creator services and website. Please read carefully.</p>
+            </div>
+            
+            <div class="terms-content">
+                <div class="last-updated">
+                    <p><strong>Last Updated:</strong> January 1, 2023</p>
+                </div>
+                
+                <div class="important-note">
+                    <p><strong>Important:</strong> By accessing or using our services, you agree to be bound by these Terms and Conditions. If you disagree with any part of the terms, you may not access our services.</p>
+                </div>
+                
+                <h2>Terms and Conditions</h2>
+                <p>Welcome to Sumit Creator. These Terms and Conditions govern your use of our website and services. By accessing or using our services, you agree to be bound by these Terms.</p>
+                
+                <h2>Definitions</h2>
+                <p>For the purposes of these Terms and Conditions:</p>
+                <ul>
+                    <li><strong>"Service"</strong> refers to the website and all associated tools, applications, and resources provided by Sumit Creator.</li>
+                    <li><strong>"User"</strong> refers to any individual or entity accessing or using our Service.</li>
+                    <li><strong>"Content"</strong> refers to all text, images, software, and other materials available through our Service.</li>
+                    <li><strong>"APK"</strong> refers to Android application package files available for download through our Service.</li>
+                </ul>
+                
+                <h2>Use License</h2>
+                <p>Permission is granted to temporarily download one copy of the materials (information or software) on Sumit Creator's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                <ul>
+                    <li>Modify or copy the materials</li>
+                    <li>Use the materials for any commercial purpose or for any public display (commercial or non-commercial)</li>
+                    <li>Attempt to decompile or reverse engineer any software contained on Sumit Creator's website</li>
+                    <li>Remove any copyright or other proprietary notations from the materials</li>
+                    <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+                </ul>
+                <p>This license shall automatically terminate if you violate any of these restrictions and may be terminated by Sumit Creator at any time.</p>
+                
+                <h2>APK Downloads</h2>
+                <h3>License for APK Files</h3>
+                <p>APK files available for download are provided under their respective license terms. You are responsible for complying with the license terms of each APK you download.</p>
+                
+                <h3>Usage Restrictions</h3>
+                <ul>
+                    <li>APK files are for personal use only unless otherwise specified</li>
+                    <li>You may not distribute, modify, or sell APK files without permission</li>
+                    <li>You are responsible for ensuring the APK files are compatible with your device</li>
+                    <li>We are not responsible for any damage caused by downloaded APK files</li>
+                </ul>
+                
+                <h2>User Accounts</h2>
+                <p>When you create an account with us, you must provide information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.</p>
+                
+                <h3>Account Security</h3>
+                <p>You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password. You agree not to disclose your password to any third party. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</p>
+                
+                <h2>Intellectual Property</h2>
+                <p>The Service and its original content (excluding APK files provided by third parties), features, and functionality are and will remain the exclusive property of Sumit Creator and its licensors. The Service is protected by copyright, trademark, and other laws of both the India and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Sumit Creator.</p>
+                
+                <h2>Disclaimer</h2>
+                <p>The materials on Sumit Creator's website are provided on an 'as is' basis. Sumit Creator makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+                
+                <h3>Accuracy of Materials</h3>
+                <p>The materials appearing on Sumit Creator's website could include technical, typographical, or photographic errors. Sumit Creator does not warrant that any of the materials on its website are accurate, complete or current. Sumit Creator may make changes to the materials contained on its website at any time without notice.</p>
+                
+                <h2>Limitations</h2>
+                <p>In no event shall Sumit Creator or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Sumit Creator's website, even if Sumit Creator or a Sumit Creator authorized representative has been notified orally or in writing of the possibility of such damage.</p>
+                
+                <h2>Links to Other Websites</h2>
+                <p>Our Service may contain links to third-party websites or services that are not owned or controlled by Sumit Creator. Sumit Creator has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You further acknowledge and agree that Sumit Creator shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods, or services available on or through any such websites or services.</p>
+                
+                <h2>Termination</h2>
+                <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the Service will immediately cease.</p>
+                
+                <h2>Governing Law</h2>
+                <p>These Terms shall be governed and construed in accordance with the laws of India, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+                
+                <h2>Changes to Terms</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                
+                <h2>Contact Us</h2>
+                <p>If you have any questions about these Terms, please contact us:</p>
+                <ul>
+                    <li>By email: legal@sumitcreator.com</li>
+                    <li>By visiting our Contact Us page</li>
+                    <li>By phone: +91 98765 43210</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sumit Creator</h3>
+                    <p>Providing innovative tools and resources for developers, creators, and tech enthusiasts worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sapk.html" target="_blank">SApk</a></li>
+                        <li><a href="about.html" target="_blank">About</a></li>
+                        <li><a href="tach.html" target="_blank">Tach</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="edition.html" target="_blank">Edition Tools</a></li>
+                        <li><a href="ai-edit.html" target="_blank">AI Editing</a></li>
+                        <li><a href="sapk.html" target="_blank">APK Collection</a></li>
+                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" target="_blank">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="active">Terms & Conditions</a></li>
+                        <li><a href="about.html" target="_blank">About Us</a></li>
+                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Sumit Creator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+    </script>
+</body>
+</html>
