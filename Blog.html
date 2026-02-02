@@ -578,8 +578,9 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="https://saeditz.in"><i class="logo-icon">SA</i></a>
-                    <a href="https://saeditz.in"><i class="logo-text">Sumit <span>Creator</i></a>
+                    <a href="https://saeditz.in" style="text-decoration: none;">
+                        <i class="logo-icon">SA</i>
+                        <i class="logo-text">Sumit <span>Creator</span></i>
                 </div>
                 
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -590,9 +591,10 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="sapk.html" target="_blank">SApk</a></li>
+                        <li><a href="blog.html" class="active">Blog</a></li>
+                        <li><a href="tach.html" target="_blank">Tach</a></li>
                         <li><a href="edition.html" target="_blank">Edition</a></li>
                         <li><a href="ai-edit.html" target="_blank">AI Edit</a></li>
-                        <li><a href="blog.html" class="active">Blog</a></li>
                         <li><a href="contact.html" target="_blank">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -650,23 +652,7 @@
                     </p>
                 </div>
                 
-                
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 40px;">
-                    <a href="index.html" class="btn btn-secondary">
-                        <i class="fas fa-arrow-left"></i> Back to Home
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="co<div class="social-share">
+                <div class="social-share">
                     <h3 class="share-title">Spread the Word</h3>
                     <div class="social-icons">
                         <a href="#" class="social-icon">
@@ -683,13 +669,54 @@
                         </a>
                         <a href="#" class="social-icon">
                             <i class="fas fa-envelope"></i>
-                        
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-preview">
+                    <h3 class="preview-title">What to Expect</h3>
+                    <div class="preview-grid">
+                        <div class="preview-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>APK Guides</h3>
+                            <p>Step-by-step tutorials for installing and using APK files safely and effectively.</p>
+                        </div>
+                        <div class="preview-card">
+                            <i class="fas fa-robot"></i>
+                            <h3>AI Tools</h3>
+                            <p>Reviews and guides for the latest AI-powered editing and creative tools.</p>
+                        </div>
+                        <div class="preview-card">
+                            <i class="fas fa-code"></i>
+                            <h3>Tech Tutorials</h3>
+                            <p>Learn new skills with our easy-to-follow technology tutorials and guides.</p>
+                        </div>
+                        <div class="preview-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Creative Tips</h3>
+                            <p>Inspiration and tips for creators, designers, and digital artists.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 40px;">
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Sumit Creator</h3>
                     <p>Providing innovative tools and resources for developers, creators, and tech enthusiasts worldwide.</p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/share/185D8PXV9e/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/share/1AYTT3xhUh/"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://x.com/block_user631"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.instagram.com/saeditz.in?igsh=a3luaWppdzlpMWFo"><i class="fab fa-instagram"></i></a>
                         <a href="https://youtube.com/@sumitray631?si=DIAG6qNRsIStJmoR"><i class="fab fa-youtube"></i></a>
@@ -702,7 +729,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="sapk.html" target="_blank">SApk</a></li>
                         <li><a href="about.html" target="_blank">About</a></li>
-                        <li><a href="blog.html" class="active">Blog</a></li>
+                        <li><a href="Blog.html" target="_blank">Blog</a></li>
                     </ul>
                 </div>
                 
@@ -712,7 +739,6 @@
                         <li><a href="edition.html" target="_blank">Edition Tools</a></li>
                         <li><a href="ai-edit.html" target="_blank">AI Editing</a></li>
                         <li><a href="sapk.html" target="_blank">APK Collection</a></li>
-                        
                     </ul>
                 </div>
                 
@@ -745,9 +771,9 @@
                 : '<i class="fas fa-bars"></i>';
         });
         
-        // Countdown Timer (Set launch date to 10 days from now)
+        // Countdown Timer (Set launch date to 5 days from now)
         const launchDate = new Date();
-        launchDate.setDate(launchDate.getDate() + 10); // 10 days from now
+        launchDate.setDate(launchDate.getDate() + 5); // 5 days from now
         
         function updateCountdown() {
             const now = new Date().getTime();
