@@ -36,7 +36,7 @@
             padding: 0 20px;
         }
         
-        /* Header */
+        /* Header & Navigation */
         header {
             background-color: white;
             box-shadow: var(--shadow);
@@ -53,6 +53,13 @@
         }
         
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo a {
+            text-decoration: none !important;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -435,8 +442,10 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="https://saeditz.in"><i class="logo-icon">SA</i></a>
-                    <a href="https://saeditz.in"><i class="logo-text">Sumit <span>Creator</i></a>
+                    <a href="https://saeditz.in">
+                        <i class="logo-icon">SA</i>
+                        <span class="logo-text">Sumit <span>Creator</span></span>
+                    </a>
                 </div>
                 
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -446,10 +455,10 @@
                 <nav id="mainNav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="sapk.html">SApk</a></li>
-                        <li><a href="blog.html" class="active">Blog</a></li>
-                        <li><a href="edition.html">Editing</a></li>
-                        <li><a href="ai-edit.html">AI Edit</a></li>
+                        <li><a href="sapk.html" target="_blank">SApk</a></li>
+                        <li><a href="blog.html" target="_blank">Blog</a></li>
+                        <li><a href="edition.html" class="active">Edition</a></li>
+                        <li><a href="ai-edit.html" target="_blank">AI Edit</a></li>
                         <li><a href="contact.html" target="_blank">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -465,61 +474,7 @@
                 <p>Professional editing tools for photos, videos, audio, and documents. Enhance your creative projects with our powerful editing solutions.</p>
             </div>
             
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <i class="fas fa-image"></i>
-                        <h3>Photo Edition Pro</h3>
-                    </div>
-                    <div class="tool-content">
-                        <p>Advanced photo editing with layers, filters, and professional tools for perfect images.</p>
-                        <ul class="tool-features">
-                            <li><i class="fas fa-check"></i> Layer-based editing</li>
-                            <li><i class="fas fa-check"></i> 100+ filters & effects</li>
-                            <li><i class="fas fa-check"></i> Batch processing</li>
-                            <li><i class="fas fa-check"></i> RAW file support</li>
-                        </ul>
-                        <a href="#" class="btn" onclick="openPhotoEditor()">Try Online</a>
-                        <a href="#" class="btn btn-outline">Download Desktop</a>
-                    </div>
-                </div>
-                
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <i class="fas fa-film"></i>
-                        <h3>Video Editor Suite</h3>
-                    </div>
-                    <div class="tool-content">
-                        <p>Edit videos with timeline, effects, transitions, and color correction tools.</p>
-                        <ul class="tool-features">
-                            <li><i class="fas fa-check"></i> Multi-track timeline</li>
-                            <li><i class="fas fa-check"></i> 4K video support</li>
-                            <li><i class="fas fa-check"></i> Color grading tools</li>
-                            <li><i class="fas fa-check"></i> Audio synchronization</li>
-                        </ul>
-                        <a href="#" class="btn" onclick="openVideoEditor()">Try Online</a>
-                        <a href="#" class="btn btn-outline">Download Desktop</a>
-                    </div>
-                </div>
-                
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <i class="fas fa-file-alt"></i>
-                        <h3>Document Editor</h3>
-                    </div>
-                    <div class="tool-content">
-                        <p>Edit and format documents with collaborative features and professional templates.</p>
-                        <ul class="tool-features">
-                            <li><i class="fas fa-check"></i> Real-time collaboration</li>
-                            <li><i class="fas fa-check"></i> 50+ templates</li>
-                            <li><i class="fas fa-check"></i> PDF export</li>
-                            <li><i class="fas fa-check"></i> Version history</li>
-                        </ul>
-                        <a href="#" class="btn" onclick="openDocumentEditor()">Try Online</a>
-                        <a href="#" class="btn btn-outline">Download Desktop</a>
-                    </div>
-                </div>
-            </div>
+            
             
             <div class="online-tools">
                 <div class="page-header">
@@ -586,7 +541,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Sumit Creator</h3>
-                    <p>Providing innovative tools and resources for developers, creators, and tech enthusiasts worldwide.</p>
+                    <p>Easy tech tutorials, apps, and digital guides for everyone</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/share/1AYTT3xhUh/"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://x.com/block_user631"><i class="fab fa-twitter"></i></a>
@@ -600,16 +555,17 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="sapk.html" target="_blank">SApk</a></li>
-                        <li><a href="Blog.html" target="_blank">Blog</a></li>
+                        <li><a href="blog.html" target="_blank">Blog</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="edition.html" target="_blank">Editing Tools</a></li>
+                        <li><a href="edition.html" class="active">Edition Tools</a></li>
                         <li><a href="ai-edit.html" target="_blank">AI Editing</a></li>
-                        <li><a href="sapk.html" target="_blank">APK Collection</a></li>
+                        <li><a href="sapk.html" target="_blank">sapk</a></li>
+                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
                     </ul>
                 </div>
                 
@@ -625,7 +581,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Sumit Creator. All rights reserved.</p>
+                <p>&copy; 2026 Sumit Creator. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -656,6 +612,4 @@
         }
     </script>
 </body>
-
 </html>
-
