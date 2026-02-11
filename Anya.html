@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Any Browser - Android App Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --android-green: #3ddc84;
+            --secondary: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo-text span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 8px 5px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        nav ul li a.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .android-icon-large {
+            font-size: 80px;
+            color: var(--android-green);
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.2rem;
+            line-height: 1.1;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: var(--android-green);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .app-download-info {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #ecfdf5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--android-green);
+            font-size: 18px;
+        }
+
+        .download-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 17px;
+        }
+
+        .btn-primary {
+            background-color: var(--android-green);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #34d399;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(61, 220, 132, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--secondary);
+            border: 2px solid #e2e8f0;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--android-green);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn-icon {
+            font-size: 22px;
+        }
+
+        /* App Screenshots */
+        .screenshots {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .screenshots-slider {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .screenshot-item {
+            width: 200px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* App Features */
+        .features {
+            padding: 100px 0;
+            background-color: #f8fafc;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+        }
+
+        .feature-icon i {
+            font-size: 30px;
+            color: var(--android-green);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        /* Download Steps */
+        .download-steps {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--android-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 25px;
+        }
+
+        .step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background-color: #f8fafc;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 30px 20px;
+            max-height: 300px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: rgb(4, 0, 12);
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: rgb(29, 3, 3);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #010408;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: rgb(20, 1, 1);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: rgb(19, 1, 1);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #01050e;
+            font-size: 0.9rem;
+        }
+
+        /* Download Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            animation: modalAppear 0.3s ease-out;
+        }
+
+        @keyframes modalAppear {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--gray);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover {
+            color: var(--secondary);
+        }
+
+        .modal h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .modal p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background: #f8fafc;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .qr-code img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 80px 0 60px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.3rem;
+            }
+
+            .download-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .screenshots, .features, .download-steps, .faq {
+                padding: 70px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .android-icon-large {
+                font-size: 60px;
+            }
+
+            .feature-card, .step {
+                padding: 30px 20px;
+            }
+
+            .app-download-info {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">SA</div>
+                    <div class="logo-text">Sumit <span>Creator</span></div>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sapk.html" class="active">SApk</a></li>
+                        <li><a href="Blog.html" target="_blank">Blog</a></li>
+                        <li><a href="edition.html" target="_blank">Edition</a></li>
+                        <li><a href="ai-edit.html" target="_blank">AI Edit</a></li>
+                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="android-icon-large">
+                    <i class="fab fa-android"></i>
+                </div>
+                
+                <div class="hero-text">
+                    <h1>Any Browser <span>Android App</span></h1>
+                    <p>Download the official Any Browser app for Android. Experience fast, secure, and lightweight browsing on your mobile device. Optimized for Android phones and tablets.</p>
+                    
+                    <div class="app-download-info">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Compatible with:</strong> Android 15 and higher
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div>
+                                <strong>File size:</strong> 33 MB (APK)
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Official Download Link:</strong> 
+                                <a href="https://www.appcreator24.com/app3758543-ru1h40" target="_blank">www.anybrowser.in
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="download-btns">
+                        <a href="https://apk.e-droid.net/apk/app3758543-ru1h40.apk?v=12" target="_blank" class="btn btn-primary" id="directDownloadBtn">
+                            <i class="fas fa-download btn-icon"></i>
+                            Download APK Now
+                        </a>
+                        <button class="btn btn-secondary" id="qrCodeBtn">
+                            <i class="fas fa-qrcode btn-icon"></i>
+                            Show QR Code
+                        </button>
+                    </div>
+                    
+                    <p style="font-size: 0.9rem; color: var(--gray); margin-top: 20px;">
+                        <i class="fas fa-shield-alt"></i> 100% Safe & Secure | Ads | Privacy Protected
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots -->
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <div class="section-title">
+                <h2>App Screenshots</h2>
+                <p>See how Any Browser looks on your Android device</p>
+            </div>
+            
+            <div class="screenshots-slider">
+                <div class="screenshot-item">
+                    <img src="https://via.placeholder.com/200x400/3ddc84/ffffff?text=Home+Screen" alt="Home Screen">
+                </div>
+                <div class="screenshot-item">
+                    <img src="https://via.placeholder.com/200x400/2563eb/ffffff?text=Browsing" alt="Browsing">
+                </div>
+                <div class="screenshot-item">
+                    <img src="https://via.placeholder.com/200x400/8b5cf6/ffffff?text=Settings" alt="Settings">
+                </div>
+                <div class="screenshot-item">
+                    <img src="https://via.placeholder.com/200x400/10b981/ffffff?text=Tabs" alt="Tabs">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Android App Features</h2>
+                <p>Optimized specifically for Android devices</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Browsing</h3>
+                    <p>Lightning fast page loading optimized for Android devices with data saving mode.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enhanced Security</h3>
+                    <p>Built-in ad, malware protection, and privacy features for safe browsing.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Optimized</h3>
+                    <p>Designed specifically for Android with touch-friendly interface and gesture controls.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-battery-three-quarters"></i>
+                    </div>
+                    <h3>Battery Efficient</h3>
+                    <p>Uses minimal battery and memory resources, extending your phone's battery life.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Cross-Device Sync</h3>
+                    <p>Sync bookmarks, history, and passwords with your desktop browser.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                    </div>
+                    <h3>Data Saver</h3>
+                    <p>Reduce data usage by up to 50% with our intelligent compression technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Steps -->
+    <section class="download-steps" id="download">
+        <div class="container">
+            <div class="section-title">
+                <h2>How to Download & Install</h2>
+                <p>Follow these simple steps to install Any Browser on your Android device</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Download APK</h3>
+                    <p>Click the download button above to get the APK file from our secure server.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Allow Installation</h3>
+                    <p>Go to Settings > Security and enable "Install from unknown sources" for your browser.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Install App</h3>
+                    <p>Open the downloaded APK file and follow the installation instructions.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Start Browsing</h3>
+                    <p>Launch Any Browser and enjoy fast, secure browsing on your Android device.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://apk.e-droid.net/apk/app3758543-ru1h40.apk?v=12" target="_blank" class="btn btn-primary" style="padding: 18px 40px;">
+                    <i class="fas fa-download"></i> Direct Download link
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about Any Browser for Android</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is Any Browser free to download?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, Any Browser is completely free to download and use. There are no hidden charges or in-app purchases required for basic functionality.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is it safe to download from appcreator24.com?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our APK file hosted on appcreator24.com is 100% safe and free from malware. We regularly scan the file to ensure security.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Which Android versions are supported?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Any Browser supports Android 8.0 (Oreo) and higher. This covers most Android devices released in the last 5 years.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why should I use Any Browser instead of Chrome?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Any Browser is lighter, faster, and more privacy-focused than Chrome. It uses less memory, saves more data, and doesn't track your browsing activity.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I update the app?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We release regular updates. You'll receive a notification when an update is available, or you can revisit this page to download the latest version.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sumit Creator</h3>
+                    <p>Providing innovative tools and resources for developers, creators, and tech enthusiasts worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sapk.html" class="active">SApk</a></li>
+                        <li><a href="about.html" target="_blank">About</a></li>
+                        <li><a href="tach.html" target="_blank">Tach</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="edition.html" target="_blank">Edition Tools</a></li>
+                        <li><a href="ai-edit.html" target="_blank">AI Editing</a></li>
+                        <li><a href="sapk.html">APK Collection</a></li>
+                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" target="_blank">Privacy Policy</a></li>
+                        <li><a href="terms.html" target="_blank">Terms & Conditions</a></li>
+                        <li><a href="about.html" target="_blank">About Us</a></li>
+                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Sumit Creator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- QR Code Modal -->
+    <div class="modal" id="qrCodeModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h3>Scan to Download</h3>
+            <p>Scan this QR code with your Android phone to download Any Browser directly</p>
+            
+            <div class="qr-code">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.appcreator24.com/app3758543-ru1h40" alt="QR Code">
+                <p>Scan QR Code</p>
+            </div>
+            
+            <p style="font-size: 0.9rem; margin-top: 20px;">
+                Or visit: <a href="https://www.appcreator24.com/app3758543-ru1h40" target="_blank">https://www.appcreator24.com/app3758543-ru1h40</a>
+            </p>
+            
+            <div style="margin-top: 30px;">
+                <a href="https://www.appcreator24.com/app3758543-ru1h40" target="_blank" class="btn btn-primary">Open Download Link</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // QR Code Modal
+        const qrCodeBtn = document.getElementById('qrCodeBtn');
+        const qrCodeModal = document.getElementById('qrCodeModal');
+        const closeModalButtons = document.querySelectorAll('.close-modal');
+
+        qrCodeBtn.addEventListener('click', function() {
+            qrCodeModal.style.display = 'flex';
+        });
+
+        // Close modal functionality
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                qrCodeModal.style.display = 'none';
+            });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === qrCodeModal) {
+                qrCodeModal.style.display = 'none';
+            }
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                faqItem.classList.toggle('active');
+                
+                // Close other FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem && item.classList.contains('active')) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                if (href === "#") return;
+                
+                e.preventDefault();
+                const targetElement = document.querySelector(href);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        document.querySelector('.nav-links').style.display = 'none';
+                    }
+                }
+            });
+        });
+
+        // Direct download button confirmation
+        document.getElementById('directDownloadBtn').addEventListener('click', function(e) {
+            // In a real scenario, this would initiate download
+            // For demo, we'll just show an alert
+            if(!this.getAttribute('target')) {
+                e.preventDefault();
+                alert("Downloading Any Browser APK from: https://www.appcreator24.com/app3758543-ru1h40\n\nIn a real application, the download would start immediately.");
+            }
+        });
+
+        // Highlight the download link in the info section
+        const downloadLink = document.querySelector('.app-download-info a');
+        downloadLink.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html>
