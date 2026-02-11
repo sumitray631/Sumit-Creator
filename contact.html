@@ -36,7 +36,7 @@
             padding: 0 20px;
         }
         
-        /* Header */
+        /* Header & Navigation */
         header {
             background-color: white;
             box-shadow: var(--shadow);
@@ -53,6 +53,13 @@
         }
         
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo a {
+            text-decoration: none !important;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -471,8 +478,10 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="https://saeditz.in"><i class="logo-icon">SA</i></a>
-                    <a href="https://saeditz.in"><i class="logo-text">Sumit <span>Creator</i></a>
+                    <a href="https://saeditz.in">
+                        <i class="logo-icon">SA</i>
+                        <span class="logo-text">Sumit <span>Creator</span></span>
+                    </a>
                 </div>
                 
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -482,11 +491,11 @@
                 <nav id="mainNav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="sapk.html">SApk</a></li>
-                        <li><a href="blog.html" class="active">Blog</a></li>
-                        <li><a href="edition.html">Editing</a></li>
-                        <li><a href="ai-edit.html">AI Edit</a></li>
-                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                        <li><a href="sapk.html" target="_blank">SApk</a></li>
+                        <li><a href="blog.html" target="_blank">Blog</a></li>
+                        <li><a href="edition.html" target="_blank">Edition</a></li>
+                        <li><a href="ai-edit.html" target="_blank">AI Edit</a></li>
+                        <li><a href="contact.html" class="active">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -511,8 +520,8 @@
                         </div>
                         <div class="contact-details">
                             <h4>Address</h4>
-                            <p>123 Tech Street, Digital City</p>
-                            <p>New Delhi, DL 110001</p>
+                            <p>Vill-Gauri, Po-Bangara, Ps-Manjhi</p>
+                            <p>Saran, (Bihar) 841205</p>
                             <p>India</p>
                         </div>
                     </div>
@@ -524,7 +533,7 @@
                         <div class="contact-details">
                             <h4>Phone</h4>
                             <p>+91 82358 89828</p>
-                            <p>+91 12345 67890</p>
+                            <p>+91 62070 79956</p>
                             <p>Mon-Fri: 9AM-6PM</p>
                         </div>
                     </div>
@@ -535,9 +544,7 @@
                         </div>
                         <div class="contact-details">
                             <h4>Email</h4>
-                            <p>info@sumitcreator.com</p>
-                            <p>support@sumitcreator.com</p>
-                            <p>careers@sumitcreator.com</p>
+                            <p>Sumitcreator143@gmail.com</p>
                         </div>
                     </div>
                     
@@ -545,9 +552,9 @@
                         <h3>Follow Us</h3>
                         <div class="social-links">
                             <a href="https://www.facebook.com/share/1AYTT3xhUh/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/block_user631"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/saeditz.in?igsh=a3luaWppdzlpMWFo"><i class="fab fa-instagram"></i></a>
-                        <a href="https://youtube.com/@sumitray631?si=DIAG6qNRsIStJmoR"><i class="fab fa-youtube"></i></a>
+                            <a href="https://x.com/block_user631"><i class="fab fa-twitter"></i></a>
+                            <a href="https://x.com/block_user631"><i class="fab fa-instagram"></i></a>
+                            <a href="https://youtube.com/@sumitray631?si=DIAG6qNRsIStJmoR"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -579,15 +586,6 @@
                     </form>
                 </div>
             </div>
-            
-            <div class="map-section">
-                <div class="map-placeholder">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <h3>Our Location</h3>
-                    <p>We're based in Digital City, New Delhi, serving creators worldwide.</p>
-                    <p>Visit our office or connect with us online - we're always happy to help!</p>
-                </div>
-            </div>
         </div>
     </main>
 
@@ -597,7 +595,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Sumit Creator</h3>
-                    <p>Providing innovative tools and resources for developers, creators, and tech enthusiasts worldwide.</p>
+                    <p>Easy tech tutorials, apps, and digital guides for everyone</p>
                     <div class="footer-social-links">
                         <a href="https://www.facebook.com/share/1AYTT3xhUh/"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://x.com/block_user631"><i class="fab fa-twitter"></i></a>
@@ -611,16 +609,17 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="sapk.html" target="_blank">SApk</a></li>
-                        <li><a href="Blog.html" target="_blank">Blog</a></li>
+                        <li><a href="blog.html" target="_blank">Blog</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="edition.html" target="_blank">Editing Tools</a></li>
+                        <li><a href="edition.html" target="_blank">Edition Tools</a></li>
                         <li><a href="ai-edit.html" target="_blank">AI Editing</a></li>
                         <li><a href="sapk.html" target="_blank">APK Collection</a></li>
+                        <li><a href="contact.html" class="active">Contact Us</a></li>
                     </ul>
                 </div>
                 
@@ -636,7 +635,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Sumit Creator. All rights reserved.</p>
+                <p>&copy; 2026 Sumit Creator. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -673,6 +672,4 @@
         });
     </script>
 </body>
-
 </html>
-
