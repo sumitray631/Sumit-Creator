@@ -36,7 +36,7 @@
             padding: 0 20px;
         }
         
-        /* Header */
+        /* Header & Navigation */
         header {
             background-color: white;
             box-shadow: var(--shadow);
@@ -53,6 +53,13 @@
         }
         
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo a {
+            text-decoration: none !important;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -442,8 +449,10 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="https://saeditz.in"><i class="logo-icon">SA</i></a>
-                    <a href="https://saeditz.in"><i class="logo-text">Sumit <span>Creator</i></a>
+                    <a href="https://saeditz.in">
+                        <i class="logo-icon">SA</i>
+                        <span class="logo-text">Sumit <span>Creator</span></span>
+                    </a>
                 </div>
                 
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -453,10 +462,10 @@
                 <nav id="mainNav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="sapk.html">SApk</a></li>
-                        <li><a href="blog.html" class="active">Blog</a></li>
-                        <li><a href="edition.html">Editing</a></li>
-                        <li><a href="ai-edit.html">AI Edit</a></li>
+                        <li><a href="sapk.html" target="_blank">SApk</a></li>
+                        <li><a href="blog.html" target="_blank">Blog</a></li>
+                        <li><a href="edition.html" target="_blank">Edition</a></li>
+                        <li><a href="ai-edit.html" class="active">AI Edit</a></li>
                         <li><a href="contact.html" target="_blank">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -472,77 +481,22 @@
                 <p>Leverage artificial intelligence for enhanced editing and creative tasks. Our AI tools make complex editing simple and accessible.</p>
             </div>
             
-            <div class="ai-tools-grid">
-                <div class="ai-tool-card">
-                    <div class="ai-tool-header">
-                        <i class="fas fa-magic"></i>
-                        <h3>AI Photo Enhancer</h3>
-                    </div>
-                    <div class="ai-tool-content">
-                        <p>Automatically enhance photo quality, remove objects, and apply AI filters with one click.</p>
-                        <ul class="ai-features">
-                            <li><i class="fas fa-check"></i> Auto-enhancement</li>
-                            <li><i class="fas fa-check"></i> Object removal</li>
-                            <li><i class="fas fa-check"></i> Style transfer</li>
-                            <li><i class="fas fa-check"></i> Face enhancement</li>
-                        </ul>
-                        <a href="#" class="btn" onclick="openAIPhotoEditor()">Try AI Photo Tool</a>
-                    </div>
-                </div>
-                
-                <div class="ai-tool-card">
-                    <div class="ai-tool-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>AI Video Assistant</h3>
-                    </div>
-                    <div class="ai-tool-content">
-                        <p>AI-powered video editing with automatic scene detection, effects, and smart trimming.</p>
-                        <ul class="ai-features">
-                            <li><i class="fas fa-check"></i> Scene detection</li>
-                            <li><i class="fas fa-check"></i> Auto-editing</li>
-                            <li><i class="fas fa-check"></i> Color correction</li>
-                            <li><i class="fas fa-check"></i> Smart subtitles</li>
-                        </ul>
-                        <a href="#" class="btn" onclick="openAIVideoEditor()">Try AI Video Tool</a>
-                    </div>
-                </div>
-                
-                <div class="ai-tool-card">
-                    <div class="ai-tool-header">
-                        <i class="fas fa-text-height"></i>
-                        <h3>AI Text Generator</h3>
-                    </div>
-                    <div class="ai-tool-content">
-                        <p>Generate content, summarize text, and enhance writing with advanced AI language models.</p>
-                        <ul class="ai-features">
-                            <li><i class="fas fa-check"></i> Content generation</li>
-                            <li><i class="fas fa-check"></i> Text summarization</li>
-                            <li><i class="fas fa-check"></i> Grammar checking</li>
-                            <li><i class="fas fa-check"></i> Tone adjustment</li>
-                        </ul>
-                        <a href="#" class="btn" onclick="openAITextGenerator()">Try AI Text Tool</a>
-                    </div>
-                </div>
-            </div>
-            
             <div class="ai-showcase">
                 <div class="showcase-content">
                     <div class="showcase-text">
-                        <h2>Why Choose AI Editing?</h2>
-                        <p>Our AI-powered tools revolutionize the editing process by automating complex tasks and providing intelligent suggestions.</p>
+                        <h2>Chatgpt Ghost Ai Photo Editing Prompts | Ghost Prompt</h2>
+                        <p>Chatgpt Ghost Ai Photo Editing Prompts – Friends, a new and amazing trend is currently going viral on social media....</p>
                         
                         <ul class="showcase-features">
-                            <li><i class="fas fa-bolt"></i> <strong>10x Faster</strong> - Complete editing tasks in minutes instead of hours</li>
-                            <li><i class="fas fa-robot"></i> <strong>Smart Automation</strong> - AI learns your style and preferences</li>
-                            <li><i class="fas fa-chart-line"></i> <strong>Professional Results</strong> - Achieve studio-quality output effortlessly</li>
-                            <li><i class="fas fa-user-friends"></i> <strong>Beginner Friendly</strong> - No technical skills required</li>
+                            <li><i class="fas fa-bolt"></i> <strong>Prompts</strong> :- 2</li>
+                            <li><i class="fas fa-user-friends"></i> <strong>Please</strong> :- 5 minutes read </li>
                         </ul>
                         
-                        <a href="#" class="btn" style="width: auto; margin-top: 20px;">Explore All AI Tools</a>
+                        <a href="Gost Ai.html" class="btn" style="width: auto; margin-top: 20px;">▶ Continue Reading</a>
                     </div>
                     
                     <div class="showcase-image">
-                        <i class="fas fa-robot"></i>
+                        <img src="Gost.jpeg" style="width:100%">
                     </div>
                 </div>
             </div>
@@ -555,7 +509,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Sumit Creator</h3>
-                    <p>Providing innovative tools and resources for developers, creators, and tech enthusiasts worldwide.</p>
+                    <p>Easy tech tutorials, apps, and digital guides for everyone</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/share/1AYTT3xhUh/"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://x.com/block_user631"><i class="fab fa-twitter"></i></a>
@@ -569,16 +523,17 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="sapk.html" target="_blank">SApk</a></li>
-                        <li><a href="Blog.html" target="_blank">Blog</a></li>
+                        <li><a href="blog.html" target="_blank">Blog</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="edition.html" target="_blank">Editing Tools</a></li>
-                        <li><a href="ai-edit.html" target="_blank">AI Editing</a></li>
+                        <li><a href="edition.html" target="_blank">Edition Tools</a></li>
+                        <li><a href="ai-edit.html" class="active">AI Editing</a></li>
                         <li><a href="sapk.html" target="_blank">APK Collection</a></li>
+                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
                     </ul>
                 </div>
                 
@@ -594,7 +549,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Sumit Creator. All rights reserved.</p>
+                <p>&copy; 2026 Sumit Creator. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -625,6 +580,4 @@
         }
     </script>
 </body>
-
 </html>
-
