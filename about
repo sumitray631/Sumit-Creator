@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9256622955212890"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Sumit Creator</title>
@@ -489,57 +487,32 @@
     <!-- Main Content -->
     <main>
         <div class="container">
-            <div class="page-header">
-                <h1>About Sumit Creator</h1>
-                <p>Learn about our mission, vision, and the passionate team behind Sumit Creator. We're dedicated to empowering creators worldwide.</p>
             </div>
             
             <div class="about-content">
                 <div class="about-section">
                 <div style="font-family: Sans-serif ;background-color:rgb(248,249,250);padding:18px;color:black"><br><h2 style="font-family: Sans-serif ;color:black;">About Us !</h2>
 <h2 style="font-family: Sans-serif ;text-align: center;">Welcome To <span id="W_Name1" >Sumit Creator</span></h2>
-<p><span id="W_Name2">Sumit Creator</span> is a Professional <span id="W_Type1">Easy tech tutorials, apps, and digital guides </span> Platform. Here we will only provide you with interesting content that you will enjoy very much. We are committed to providing you the best of <span id="W_Type2">Easy tech tutorials, apps, and digital guides </span>, with a focus on reliability and <span id="W_Spec">tech tutorials</span>. we strive to turn our passion for <span id="W_Type3">Easy tech tutorials, apps, and digital guides </span> into a thriving website. We hope you enjoy our <span id="W_Type4">Easy tech tutorials, apps, and digital guides </span> as much as we enjoy giving them to you.</p>
-<p>I will keep on posting such valuable anf knowledgeable information on my Website for all of you. Your love and support matters a lot.</p>
+<p>Hello, my name is <b>Sumit Kumar Yadav</b>.</p>
+    <p>I am <b>18 years old</b> and a passionate <b>Creator & YouTuber</b>.</p>
+
+    <p>
+        I love creating digital content and exploring new ideas in the world of
+        video creation, web creativity, tech content and online entertainment.
+    </p>
+
+    <p>
+        My goal is to build something unique, inspire people, and grow as a successful digital creator.
+    </p>
+
+    <p class="tag">
+        — Sumit Kumar Yadav <br>
+        Creator | YouTuber
+    </p>
 <p style="font-weight: bold; text-align: center;">Thank you For Visiting Our Site<br><br>
 <span style="color: blue; font-size: 16px; font-weight: bold; text-align: center;">Have a great day !</span></p></div><br><br>
                 
-                <div class="about-section">
-                    <h2>Mission & Vision</h2>
-                    <div class="mission-vision">
-                        <div class="mission-card">
-                            <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
-                            <p>To empower creators, developers, and tech enthusiasts with accessible, innovative tools and resources. We believe everyone should have the opportunity to bring their creative visions to life, regardless of their technical expertise or budget.</p>
-                        </div>
-                        <div class="vision-card">
-                            <h3><i class="fas fa-eye"></i> Our Vision</h3>
-                            <p>To become the world's most trusted platform for creative tools and resources, fostering a global community of innovators who collaborate, learn, and create together using cutting-edge technology.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-section">
-                    <h2>Our Values</h2>
-                    <div class="mission-vision">
-                        <div style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; border-left: 4px solid var(--accent);">
-                            <h3><i class="fas fa-lightbulb"></i> Innovation</h3>
-                            <p>We constantly explore new technologies and approaches to solve creative challenges.</p>
-                        </div>
-                        <div style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; border-left: 4px solid var(--primary);">
-                            <h3><i class="fas fa-users"></i> Community</h3>
-                            <p>We believe in the power of collaboration and actively engage with our user community.</p>
-                        </div>
-                        <div style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; border-left: 4px solid #4CAF50;">
-                            <h3><i class="fas fa-shield-alt"></i> Integrity</h3>
-                            <p>We prioritize security and transparency in everything we do, ensuring our users can trust our platform.</p>
-                        </div>
-                        <div style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; border-left: 4px solid #FF9800;">
-                            <h3><i class="fas fa-handshake"></i> Accessibility</h3>
-                            <p>We design our tools to be user-friendly and accessible to creators of all skill levels.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </main>
 
     <!-- Footer -->
@@ -607,4 +580,3 @@
     </script>
 </body>
 </html>
-
