@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Creator - Content Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo a {
+            text-decoration: none !important;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo-text span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 8px 5px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        nav ul li a.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Main Content */
+        main {
+            min-height: calc(100vh - 200px);
+            padding: 40px 0;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: var(--shadow);
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: var(--primary);
+            margin-left: 10px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary);
+            box-shadow: 0 6px 15px rgba(74, 111, 165, 0.3);
+        }
+        
+        /* Post Content Area */
+        .post-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+        
+        .post-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .post-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .post-meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .post-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .post-content h2 {
+            color: var(--primary);
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(74, 111, 165, 0.1);
+        }
+        
+        .post-content h3 {
+            color: var(--secondary);
+            margin: 25px 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .post-content p {
+            margin-bottom: 20px;
+        }
+        
+        .post-content ul, .post-content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .post-content li {
+            margin-bottom: 10px;
+        }
+        
+        .prompt-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        /* Featured Posts */
+        .featured-posts {
+            margin-top: 60px;
+        }
+        
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .post-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .post-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .post-card-img {
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .post-card-content {
+            padding: 25px;
+        }
+        
+        .post-card-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .post-card-content p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            min-height: 60px;
+        }
+        
+        .post-card-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.85rem;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #b0b7c3;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #b0b7c3;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .post-header h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .hero {
+                padding: 40px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .post-container {
+                padding: 25px;
+            }
+            
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-column {
+                min-width: 100%;
+                padding-right: 0;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 10px;
+                display: block;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .post-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .post-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="https://saeditz.in">
+                        <i class="logo-icon">SA</i>
+                        <span class="logo-text">Sumit <span>Creator</span></span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sapk.html">SApk</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="edition.html">Editing</a></li>
+                        <li><a href="ai-edit.html">AI Edit</a></li>
+                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Hero Section -->
+            <div class="hero">
+                <h1>Welcome to Sumit Creator</h1>
+            </div>
+            
+            <!-- Recent Post -->
+            <div class="post-container">
+                <div class="post-header">
+                    <h1>Adobe Photoshop 0.7 download (Free)- Complete Guid For pc :- </h1>
+                    <img src="Adobe.jpeg" style="width:100%">
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> March 6, 2026</span>
+                        <span><i class="far fa-user"></i> Sumit Creator</span>
+                        <span><i class="far fa-clock"></i> 10 min read</span>
+                    </div>
+                </div>
+                
+                <div class="post-content">
+                    <p>अगर आप फोटो एडिटिंग सीखना चाहते हैं और एक हल्का लेकिन पवरफुल सॉफ्टवेयर खोज रहे है, तो Adobe Photoshop 7.0 आपके लिए बहुत अच्छा हैं । यह Adobe का पुराना लेकिन बहुत ही पोपुलर फोटो Editing Software है, जिसे आज भी कई लोग इस्तेमाल करते हैं । खासकर जो लोग फोटो एडिटिंग की शुरुआत करते हैं, उनके लिए Photoshop 0.7 बहुत आसान और हल्का सॉफ्टवेर मन जाता हैं । </p>
+                    <p>इस आर्टिकल मे हम आपको बताएंगे की Photoshop 7.0 क्या है, इसके फीचर्स क्या हैं, और इसे अपने कंप्युटर या लैपटॉप मे कैसे डाउनलोड और इन्स्टॉल करें । </p>
+
+                    <h2>Photoshop 7.0 क्या है</h2>
+
+                    <p>Photoshop 7.0 Adobe कंपनी द्ररा बनाया गया एक फोटो एडिटिंग सॉफ्टवेयर है । इस सॉफ्टवेर की मदद से आप को एडिट कर सकते हैं, बैकग्राउंड बदल सकते हैं, कलर करेक्शन कर सकते हैं, और कई तरह के ग्राफिक डिजाइन बना सकते हैं ।</p>
+                    
+                    <h2>Photoshop 7.0 के मुख्य फीचर्स :-</h2>
+                    
+                    <h3>Photoshop 7.0 मे कई सुंदर फीचर मिलता हैं जो फोटो एडिट को आसान बनाते हैं।</h3>
+
+                    <ol>
+                        <li>सबसे पहले इसमें Layer System मिलता है। लेयर की मदद से आप अलग-अलग चीजों को एडिट कर सकते हैं और फोटो को ज्यादा प्रोफेशनल बना सकते हैं</li>
+                        <li>दूसरा फीचर है Text Tool। इससे आप फ़ोटो पर आलग-अलग स्टाइल टेक्स्ट लिख सकते हैं, Youtube thumbnail, banner या पोस्टर बनाने मे यह बहुत काम आता हैं।</li>
+                        <li>तीसरा फीचर है Clone Tool इस टूल की मदद से आप फ़ोटो मे किसी भी unwanted object को हटा सकते हैं।</li>
+                    </ol>
+                    
+                    <h3>इसके अलावा Photoshop 7.0 मे Color Adjustment, Filters, Effects, Crop Tool और Brush Tool जैसे कई टूल्स भी मिलते हैं, जिनकी मदद से आप फोटो को पूरी तरह से बदल सकते है।</h3>
+
+                    <h2>Photoshop 7.0 सिस्टम रिकवर्मेंट :-</h2>
+
+                    <h3>Photoshop 7.0 को चलाने के लिए ज्यादा Pawerful कंप्युटर की जरूरत नहीं होती। यह बहुत ही काम सिस्टम मे भी चल जाता है।</h3>
+
+                    <h3>Munimum Requirements</h3>
+
+                    <u1 style="list-style-position: inside;">
+                        <li>window XP / window 7 / window 10</li>
+                        <li>256 MB RAM</li>
+                        <li>500 MB Free Storage</li>
+                        <li>Basic Processor</li>
+                    </u1>
+                    
+                    <h3>अगर आपके कंप्युटर में यह सब है तो Photoshop 0.7 आसानी से चल जाएगा।</h3>
+
+                    <h2>Photoshop 7.0 डाउनलोड कैसे करें:-</h2>
+
+                    <p></p><b>Stap 1:-</b> सबसे पहले नीचे दिए गए डाउनलोड बटन पर क्लिक करे।</p>
+                    <p></p><b>Stap 2:-</b> डाउनलोड बटन पर क्लिक करने के बाद Photoshop 7.0 की zip फाइल डाउनलोड होना शुरू हो जाएगी।</p>
+                    <p></p><b>Stap 3:-</b> डाउनलोड पूरा होने के बाद ZIP File को Extract करें।</p>
+                    <p></p><b>Stap 4:-</b> अब Extract होनेके बाद file open करे।</p>
+                    <p></p><b>Stap 5:-</b> फाइल मे देखे की Setup file और क्लिक करे।</p>
+                    <p></p><b>Stap 3:-</b> अब Install पर क्लिक करे और इंसतोलेशन पूरा होने तक इंतजार करें।</p>
+
+                    <h2>Photoshop 7.0 किसकें लिए अच्छा है :-</h2>
+
+                    <h3>Photoshop 7.0 खासकर इन लोगों के लिए अच्छा है:</h3>
+
+                    <u1 style="list-style-position: inside;">
+                        <li>Beginner Photo Editors</li>
+                        <li>YouTube Thumbnail Disigners</li>
+                        <li>Graphic Designers</li>
+                        <li>Students</li>
+                        <li>Low PC Users</li>
+                    </u1>
+
+                    <h3>अगर आप फोटो एडिटिंग सीखना चाहते हैं या YouTube thumbnail बनाना चाहते हैं, तो Photoshop 7.0 एक अच्छा आप्शन है।</h3>
+                    
+                    <h2>Photoshop 7.0 के फायदे :-</h2>
+
+                    <h3>Photoshop 7.0 के कई फायदे हैं।</h3>
+
+                    <u1 style="list-style-position: inside;">
+                        <li>सबसे बड़ा फायदा यह है की यह बहुत हल्का सॉफ्टवेयर है। इसलिए यह पुराने कंप्युटर मे भी आसानी से चलता है।</li>
+                        <li>दूसरा फायदा यह है की इसे सीखना आसान हैं। Beginners भी इसे जल्दी सिख सकते है।</li>
+                        <li>तीसरा फायदा यह हैं की इसमे फ़ोटो एडिटिंग के लगभग सभी बेसिक टूल्स मिल जाते हैं।</li>
+                    </u1>
+
+                    <h1>निष्कर्ष :-</h1>
+
+                    <h3>अगर आप फ़ोटो एडिटिंग सीखना चाहते है। और एक हल्का तथा आसान सॉफ्टवेयर चाहते हैं, तो Adobe Photoshop 7.0 आपके लिए अच्छा बिकल्प हैं। यह सॉफ्टवेयर Beginner के लिए काफी अच्छा हैं और इसमे फ़ोटो एडिटिंग के कई जरूरी टूल्स मिलते हैं।</h3>
+                    
+                    <p>आप इसे डाउनलोड करके आसानी से फोटो एडिटिंग कर सकते है।</p>
+                    <div class="note">
+                        <strong>नोट:</strong> डाउनलोड और इन्स्टॉल और Open करने मे कोई दिकत हो तो मेर Youtube Video देखे। लिंक नीचे है।
+
+                        <iframe width="700" height="400" src="https://www.youtube.com/embed/v-y8RK8DV0I?si=hkMs3_fv8dJQDC_T" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Featured Posts -->
+            <div class="featured-posts">
+                <h2 style="text-align: center; color: var(--primary); margin-bottom: 30px; font-size: 2rem;">More Articles</h2>
+                
+                <div class="posts-grid">
+                    <div class="post-card">
+                        <div class="post-card-img">
+                            <img src="Gcam.jpg" style="width:100%">
+                        </div>
+                        <div class="post-card-content">
+                            <h3>
+                                <a href="Camera.html">
+                                Gcam Camera App And Config Files | Gcam Camera Config File</a></h3>
+                            <p>Gcam Camera App And Config Files – Hello dear friend my is Sumit and welcome to our website Sumit Creator. Friends, a few days ago we told you all about the LMC 8.4 app…</p>
+                            
+                            <div class="post-card-meta">
+                                <span><i class="far fa-calendar"></i> Jan 31, 2026</span>
+                                <span><i class="far fa-eye"></i> 1.2K views</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post-card">
+                        <div class="post-card-img">
+                            <img src="Any.jpeg" style="width:100%">
+                        </div>
+                        <div class="post-card-content">
+                            <h3>
+                               <a href="Any.html"> 
+                                Any Browser App download | No History Catch Browser:-</a></h3>
+                            <p>Hello Dear Friend’s How Know Any Browser App A No History Catch App And I Am A Sumit Yadav Welcom To My Site Sumit Creator Read And Download…</p>
+                            
+                            <div class="post-card-meta">
+                                <span><i class="far fa-calendar"></i> Jan 5, 2024</span>
+                                <span><i class="far fa-eye"></i> 2.5K views</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post-card">
+                        <div class="post-card-img">
+                            <img src="aitrend.jpeg" style="width:100%">
+                        </div>
+                        <div class="post-card-content">
+                            <h3>
+                                <a href="aitrend.html">
+                                Police वाला Ai Video प्रॉम्प्ट:-</a></h3>
+                    <p>दोस्तों, सोशल मीडिया पर एक नया और अद्भुत ट्रेंड वायरल हो रहा है। इस ट्रेंड में लोग अपनी सामान्य सेल्फी और तस्वीरों को पुलिस से हैन्डसेक वाली विडिओ बना  रहे हैं। यह ट्रेंड इंस्टाग्राम रील्स और यूट्यूब शॉर्ट्स पर हर जगह देखा जा रहा है।</p>
+                    
+                            <div class="post-card-meta">
+                                <span><i class="far fa-calendar"></i> Dec 28, 2023</span>
+                                <span><i class="far fa-eye"></i> 3.1K views</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sumit Creator</h3>
+                    <p>Providing innovative tools and resources for developers, creators, and tech enthusiasts worldwide.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1AYTT3xhUh/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/block_user631"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/saeditz.in?igsh=a3luaWppdzlpMWFo"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@sumitray631?si=DIAG6qNRsIStJmoR"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sapk.html" target="_blank">SApk</a></li>
+                        <li><a href="Blog.html" target="_blank">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="edition.html" target="_blank">Editing Tools</a></li>
+                        <li><a href="ai-edit.html" target="_blank">AI Editing</a></li>
+                        <li><a href="sapk.html" target="_blank">APK Collection</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">sumitcreator143@gmail.com</a></li>
+                        <li><a href="#">+91 62070 79956</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="Terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Sumit Creator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
