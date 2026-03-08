@@ -3,6 +3,14 @@
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9256622955212890"
      crossorigin="anonymous"></script>
+    
+    <link rel="icon" type="image/png"
+    sizes="32*32" href="sa.jpeg">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Sumit Creator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -43,30 +51,6 @@
             z-index: 1000;
         }
         
-        .top-header {
-            background-color: var(--primary);
-            color: white;
-            padding: 8px 0;
-            font-size: 0.85rem;
-        }
-        
-        .top-header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .top-header-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            transition: opacity 0.3s;
-        }
-        
-        .top-header-links a:hover {
-            opacity: 0.8;
-        }
-        
         .header-content {
             display: flex;
             justify-content: space-between;
@@ -75,6 +59,13 @@
         }
         
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo a {
+            text-decoration: none !important;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -101,58 +92,6 @@
         
         .logo-text span {
             color: var(--accent);
-        }
-        
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        .search-container {
-            position: relative;
-        }
-        
-        .search-icon {
-            background: none;
-            border: none;
-            font-size: 1.2rem;
-            color: var(--dark);
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        
-        .search-icon:hover {
-            background-color: #f0f0f0;
-            color: var(--primary);
-        }
-        
-        .search-box {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            width: 300px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            padding: 15px;
-            display: none;
-            z-index: 1001;
-        }
-        
-        .search-box.active {
-            display: block;
-        }
-        
-        .search-box input {
-            width: 100%;
-            padding: 10px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            margin-bottom: 10px;
         }
         
         nav ul {
@@ -305,6 +244,144 @@
             color: var(--primary);
         }
         
+        /* Post Content Area */
+        .post-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+        
+        .post-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .post-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .post-meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .post-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .post-content h2 {
+            color: var(--primary);
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(74, 111, 165, 0.1);
+        }
+        
+        .post-content h3 {
+            color: var(--secondary);
+            margin: 25px 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .post-content p {
+            margin-bottom: 20px;
+        }
+        
+        .post-content ul, .post-content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .post-content li {
+            margin-bottom: 10px;
+        }
+        
+        .prompt-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        /* Featured Posts */
+        .featured-posts {
+            margin-top: 60px;
+        }
+        
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .post-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .post-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .post-card-img {
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .post-card-content {
+            padding: 25px;
+        }
+        
+        .post-card-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .post-card-content p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            min-height: 60px;
+        }
+        
+        .post-card-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.85rem;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
         /* Footer */
         footer {
             background-color: var(--dark);
@@ -384,16 +461,16 @@
         
         /* Responsive Design */
         @media (max-width: 992px) {
-            .hero h2 {
+            .hero h1 {
                 font-size: 2.2rem;
+            }
+            
+            .post-header h1 {
+                font-size: 2rem;
             }
         }
         
         @media (max-width: 768px) {
-            .top-header {
-                display: none;
-            }
-            
             .header-content {
                 flex-direction: column;
                 align-items: flex-start;
@@ -436,17 +513,27 @@
                 padding: 40px 20px;
             }
             
-            .hero h2 {
+            .hero h1 {
                 font-size: 1.8rem;
             }
             
-            .features {
+            .post-container {
+                padding: 25px;
+            }
+            
+            .posts-grid {
                 grid-template-columns: 1fr;
             }
             
             .footer-column {
                 min-width: 100%;
                 padding-right: 0;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 10px;
+                display: block;
             }
         }
         
@@ -455,18 +542,16 @@
                 padding: 0 15px;
             }
             
-            .hero h2 {
+            .hero h1 {
                 font-size: 1.6rem;
             }
             
-            .page-header h1 {
+            .post-header h1 {
                 font-size: 1.8rem;
             }
             
-            .btn-secondary {
-                margin-left: 0;
-                margin-top: 10px;
-                display: block;
+            .post-container {
+                padding: 20px;
             }
         }
     </style>
@@ -476,20 +561,11 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">   
-                    <div class="logo-icon">SA</div>
-                    <div class="logo-text">Sumit <span>Creator</span></div>
-                </div>
-                
-                <div class="header-right">
-                    <div class="search-container">
-                        <button class="search-icon" id="searchIcon">
-                            <i class="fas fa-search"></i>
-                        </button>
-                        <div class="search-box" id="searchBox">
-                            <input type="text" id="searchInput" placeholder="Search...">
-                        </div>
-                    </div>
+                <div class="logo">
+                    <a href="https://saeditz.in">
+                        <i class="logo-icon">SA</i>
+                        <span class="logo-text">Sumit <span>Creator</span></span>
+                    </a>
                 </div>
                 
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -499,10 +575,10 @@
                 <nav id="mainNav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="sapk.html" target="_blank">SApk</a></li>
-                        <li><a href="Blog.html" class="active">Blog</a></li>
-                        <li><a href="edition.html" target="_blank">Edition</a></li>
-                        <li><a href="ai-edit.html" target="_blank">AI Edit</a></li>
+                        <li><a href="sapk.html">SApk</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="edition.html">Editing</a></li>
+                        <li><a href="ai-edit.html">AI Edit</a></li>
                         <li><a href="contact.html" target="_blank">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -513,15 +589,35 @@
     <!-- Main Content -->
     <main>
         <div class="container">
+            <!-- Hero Section -->
             <div class="hero">
-                <h2>Welcome to Sumit Creator</h2>
+                <h1>Welcome to Sumit Creator</h1>
             </div>
-            
-            <div class="page-header">
+             <div class="page-header">
                
             </div>
             
             <div class="features">
+                <div class="feature-card">
+                    <div style="max-width:420px;border:1px solid #ddd">
+                        <a href="https://saeditz.in/Camera.html" target="_blank"></a><img src="Adobe.jpeg" style="width:100%">
+                    </div>
+                    <a href="https://saeditz.in/Camera.html" target="_blank"></a>
+                    <h3>Adobe Photoshop 0.7 download (Free)- Complete Guid For pc :- </h3>
+                    <p>यह Adobe का पुराना लेकिन बहुत ही पोपुलर फोटो Editing Software है, जिसे आज भी कई लोग इस्तेमाल करते हैं । खासकर जो लोग फोटो एडिटिंग की शुरुआत करते हैं,</p>
+                    <a href="Adobe.html".html" class="btn" target="_blank" style="margin-top: 15px;">▶ Continue Reading</a>
+                </div>
+
+                <div class="feature-card">
+                    <div style="max-width:420px;border:1px solid #ddd">
+                        <a href="https://saeditz.in/Camera.html" target="_blank"></a><img src="aitrend.jpeg" style="width:100%">
+                    </div>
+                    <a href="https://saeditz.in/Camera.html" target="_blank"></a>
+                    <h3>Police वाला Ai Video प्रॉम्प्ट:-</h3>
+                    <p>दोस्तों, सोशल मीडिया पर एक नया और अद्भुत ट्रेंड वायरल हो रहा है। इस ट्रेंड में लोग अपनी सामान्य सेल्फी और तस्वीरों को पुलिस से हैन्डसेक वाली विडिओ बना  रहे हैं। यह ट्रेंड इंस्टाग्राम रील्स और यूट्यूब शॉर्ट्स पर हर जगह देखा जा रहा है।</p>
+                    <a href="aitrend.html".html" class="btn" target="_blank" style="margin-top: 15px;">▶ Continue Reading</a>
+                </div>
+
                 <div class="feature-card">
                     <div style="max-width:420px;border:1px solid #ddd">
                     <img src="Gost.jpeg" style="width:100%">
@@ -572,26 +668,26 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="sapk.html" target="_blank">SApk</a></li>
-                        <li><a href="Blog.html" class="active">Blog</a></li>
+                        <li><a href="Blog.html" target="_blank">Blog</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Services</h3>
+                    <h3>Categories</h3>
                     <ul class="footer-links">
-                        <li><a href="edition.html">Edition Tools</a></li>
+                        <li><a href="edition.html" target="_blank">Editing Tools</a></li>
                         <li><a href="ai-edit.html" target="_blank">AI Editing</a></li>
-                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                        <li><a href="sapk.html" target="_blank">SApk</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Legal</h3>
+                    <h3>Contact Us</h3>
                     <ul class="footer-links">
-                        <li><a href="privacy.html" target="_blank">Privacy Policy</a></li>
-                        <li><a href="terms.html" target="_blank">Terms & Conditions</a></li>
-                        <li><a href="about.html" target="_blank">About Us</a></li>
-                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                        <li><a href="#">sumitcreator143@gmail.com</a></li>
+                        <li><a href="#">+91 62070 79956</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="Terms.html">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
@@ -600,6 +696,37 @@
                 <p>&copy; 2026 Sumit Creator. All rights reserved.</p>
             </div>
         </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
