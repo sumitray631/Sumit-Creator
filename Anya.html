@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-            
     <link rel="icon" type="image/png"
     sizes="32*32" href="sa.jpeg">
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9256622955212890"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Any Browser - Android App Download</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Any Browser</title>
     <style>
         * {
             margin: 0;
@@ -18,29 +13,30 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+        
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --android-green: #3ddc84;
-            --secondary: #0f172a;
-            --light: #f8fafc;
-            --gray: #64748b;
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-
+        
         body {
-            background-color: #f1f5f9;
-            color: #334155;
+            background-color: #f5f7fa;
+            color: var(--dark);
             line-height: 1.6;
         }
-
+        
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
+        
         /* Header & Navigation */
         header {
             background-color: white;
@@ -128,7 +124,7 @@
             color: var(--primary);
             cursor: pointer;
         }
-
+        
         /* Hero Section */
         .hero {
             padding: 100px 0 80px;
@@ -435,11 +431,11 @@
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
-
+        
         /* Footer */
         footer {
             background-color: var(--dark);
-            color: rgb(4, 0, 12);
+            color: white;
             padding: 40px 0 20px;
         }
         
@@ -460,7 +456,7 @@
         .footer-column h3 {
             font-size: 1.3rem;
             margin-bottom: 20px;
-            color: rgb(29, 3, 3);
+            color: white;
         }
         
         .footer-links {
@@ -472,13 +468,13 @@
         }
         
         .footer-links a {
-            color: #010408;
+            color: #b0b7c3;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         
         .footer-links a:hover {
-            color: rgb(20, 1, 1);
+            color: white;
         }
         
         .social-links {
@@ -495,7 +491,7 @@
             height: 40px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            color: rgb(19, 1, 1);
+            color: white;
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -509,145 +505,77 @@
             text-align: center;
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #01050e;
+            color: #b0b7c3;
             font-size: 0.9rem;
         }
-
-        /* Download Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 500px;
-            padding: 40px;
-            text-align: center;
-            position: relative;
-            animation: modalAppear 0.3s ease-out;
-        }
-
-        @keyframes modalAppear {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: var(--gray);
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .close-modal:hover {
-            color: var(--secondary);
-        }
-
-        .modal h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-
-        .modal p {
-            color: var(--gray);
-            margin-bottom: 30px;
-        }
-
-        .qr-code {
-            width: 200px;
-            height: 200px;
-            margin: 20px auto;
-            background: #f8fafc;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        .qr-code img {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 10px;
-        }
-
+        
         /* Responsive */
         @media (max-width: 992px) {
-            .hero-text h1 {
-                font-size: 2.8rem;
+            .page-header h1 {
+                font-size: 2rem;
             }
         }
-
+        
         @media (max-width: 768px) {
-            .nav-links {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 15px;
                 display: none;
             }
-
-            .mobile-menu-btn {
+            
+            nav.active {
                 display: block;
             }
-
-            .hero {
-                padding: 80px 0 60px;
-            }
-
-            .hero-text h1 {
-                font-size: 2.3rem;
-            }
-
-            .download-btns {
+            
+            nav ul {
                 flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
                 width: 100%;
-                max-width: 300px;
-                justify-content: center;
             }
-
-            .section-title h2 {
-                font-size: 2rem;
+            
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
             }
-
-            .screenshots, .features, .download-steps, .faq {
-                padding: 70px 0;
+            
+            nav ul li a {
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tools-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-column {
+                min-width: 100%;
+                padding-right: 0;
             }
         }
-
-        @media (max-width: 480px) {
-            .hero-text h1 {
-                font-size: 2rem;
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
             }
-
-            .android-icon-large {
-                font-size: 60px;
-            }
-
-            .feature-card, .step {
-                padding: 30px 20px;
-            }
-
-            .app-download-info {
-                padding: 15px;
+            
+            .page-header h1 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -671,16 +599,16 @@
                 <nav id="mainNav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="sapk.html" class="active">SApk</a></li>
-                        <li><a href="Blog.html" target="_blank">Blog</a></li>
-                        <li><a href="edition.html" target="_blank">Edition</a></li>
+                        <li><a href="sapk.html" target="_blank">SApk</a></li>
+                        <li><a href="blog.html" target="_blank">Blog</a></li>
+                        <li><a href="edition.html"target="blank">Edition</a></li>
                         <li><a href="ai-edit.html" target="_blank">AI Edit</a></li>
                         <li><a href="contact.html" target="_blank">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-    </header
+    </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -751,16 +679,16 @@
             
             <div class="screenshots-slider">
                 <div class="screenshot-item">
-                    <img src="https://via.placeholder.com/200x400/3ddc84/ffffff?text=Home+Screen" alt="Home Screen">
+                    <img src="anyopen.jpeg" alt="Tabs">
                 </div>
                 <div class="screenshot-item">
-                    <img src="https://via.placeholder.com/200x400/2563eb/ffffff?text=Browsing" alt="Browsing">
+                    <img src="Anyhome.jpeg" alt="Home Screen">
                 </div>
                 <div class="screenshot-item">
-                    <img src="https://via.placeholder.com/200x400/8b5cf6/ffffff?text=Settings" alt="Settings">
+                    <img src="googleany.jpeg" alt="Browsing">
                 </div>
                 <div class="screenshot-item">
-                    <img src="https://via.placeholder.com/200x400/10b981/ffffff?text=Tabs" alt="Tabs">
+                    <img src="anyb.jpeg" alt="Browsing">
                 </div>
             </div>
         </div>
@@ -949,7 +877,7 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="sapk.html" class="active">SApk</a></li>
+                        <li><a href="sapk.html" target="_blank">SApk</a></li>
                         <li><a href="blog.html" target="_blank">Blog</a></li>
                     </ul>
                 </div>
@@ -957,9 +885,9 @@
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="edition.html" target="_blank">Edition Tools</a></li>
+                        <li><a href="edition.html" class="active">Edition Tools</a></li>
                         <li><a href="ai-edit.html" target="_blank">AI Editing</a></li>
-                        <li><a href="sapk.html">APK Collection</a></li>
+                        <li><a href="sapk.html" target="_blank">sapk</a></li>
                         <li><a href="contact.html" target="_blank">Contact Us</a></li>
                     </ul>
                 </div>
@@ -976,120 +904,35 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Sumit Creator. All rights reserved.</p>
+                <p>&copy; 2026 Sumit Creator. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- QR Code Modal -->
-    <div class="modal" id="qrCodeModal">
-        <div class="modal-content">
-            <button class="close-modal">&times;</button>
-            <h3>Scan to Download</h3>
-            <p>Scan this QR code with your Android phone to download Any Browser directly</p>
-            
-            <div class="qr-code">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.appcreator24.com/app3758543-ru1h40" alt="QR Code">
-                <p>Scan QR Code</p>
-            </div>
-            
-            <p style="font-size: 0.9rem; margin-top: 20px;">
-                Or visit: <a href="https://www.appcreator24.com/app3758543-ru1h40" target="_blank">https://www.appcreator24.com/app3758543-ru1h40</a>
-            </p>
-            
-            <div style="margin-top: 30px;">
-                <a href="https://www.appcreator24.com/app3758543-ru1h40" target="_blank" class="btn btn-primary">Open Download Link</a>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
         });
-
-        // QR Code Modal
-        const qrCodeBtn = document.getElementById('qrCodeBtn');
-        const qrCodeModal = document.getElementById('qrCodeModal');
-        const closeModalButtons = document.querySelectorAll('.close-modal');
-
-        qrCodeBtn.addEventListener('click', function() {
-            qrCodeModal.style.display = 'flex';
-        });
-
-        // Close modal functionality
-        closeModalButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                qrCodeModal.style.display = 'none';
-            });
-        });
-
-        // Close modal when clicking outside
-        window.addEventListener('click', function(e) {
-            if (e.target === qrCodeModal) {
-                qrCodeModal.style.display = 'none';
-            }
-        });
-
-        // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', function() {
-                const faqItem = this.parentElement;
-                faqItem.classList.toggle('active');
-                
-                // Close other FAQ items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    if (item !== faqItem && item.classList.contains('active')) {
-                        item.classList.remove('active');
-                    }
-                });
-            });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                
-                if (href === "#") return;
-                
-                e.preventDefault();
-                const targetElement = document.querySelector(href);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if (window.innerWidth <= 768) {
-                        document.querySelector('.nav-links').style.display = 'none';
-                    }
-                }
-            });
-        });
-
-        // Direct download button confirmation
-        document.getElementById('directDownloadBtn').addEventListener('click', function(e) {
-            // In a real scenario, this would initiate download
-            // For demo, we'll just show an alert
-            if(!this.getAttribute('target')) {
-                e.preventDefault();
-                alert("Downloading Any Browser APK from: https://www.appcreator24.com/app3758543-ru1h40\n\nIn a real application, the download would start immediately.");
-            }
-        });
-
-        // Highlight the download link in the info section
-        const downloadLink = document.querySelector('.app-download-info a');
-        downloadLink.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
+        
+        // Editor Functions
+        function openPhotoEditor() {
+            alert('Opening Photo Editor... This would launch the online photo editor in a real application.');
+        }
+        
+        function openVideoEditor() {
+            alert('Opening Video Editor... This would launch the online video editor in a real application.');
+        }
+        
+        function openDocumentEditor() {
+            alert('Opening Document Editor... This would launch the online document editor in a real application.');
+        }
     </script>
 </body>
 </html>
-
-
