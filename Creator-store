@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+        
     <link rel="icon" type="image/png"
     sizes="32*32" href="sa.jpeg">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9256622955212890"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APK Collection - Sumit Creator</title>
+    <title>Creator Store - Sumit Creator</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -392,8 +390,8 @@
                 <nav id="mainNav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="sapk.html" class="active">SApk</a></li>
-                        <li><a href="blog.html" target="_blank">Blog</a></li>
+                        <li><a href="Store.html" class="active">Creator Store</a></li>
+                        <li><a href="Creator-store" target="_blank">Blog</a></li>
                         <li><a href="edition.html" target="_blank">Edition</a></li>
                         <li><a href="ai-edit.html" target="_blank">AI Edit</a></li>
                         <li><a href="contact.html" target="_blank">Contact Us</a></li>
@@ -407,38 +405,39 @@
     <main>
         <div class="container">
             <div class="page-header">
-                <h1>APK Collection</h1>
-                <p>Browse our collection of safe and tested APK files for various applications and tools. All downloads are verified and free from malware.</p>
+                <h1>Creator Store</h1>
+                <p>Creator Store - Best Tools & Gadgets For Creators</p>
+                <h3>Disclosure:- This Page may contain affilite links. If you buy through these links, we may earn a small commission at no extra cost you.</h3>
             </div>
             
             <div class="apk-grid">
                 <div class="apk-card">
                     <div class="apk-img">
-                        <img src="Gcamapp.jpeg".jpg" style="width:100%">
+                        <img src="mic.jpeg".jpg" style="width:100%">
                     </div>
                     <div class="apk-content">
-                        <h3>Gcam Camera App</h3>
-                        <p>GCam is not just a normal camera app. It’s special because it uses Google’s smart software to make pictures look really good. </p>
+                        <h3>Gaming Mic | Podcast Microphone | MAONO</h3>
+                        <p>Features:- 1 click Mute, adjustable Rgb Light For Youtube Recordimg</p>
                         <div class="apk-meta">
-                            <span><i class="fas fa-download"></i> 23.56+ MB</span>
-                            <span><i class="fas fa-star"></i> 4.5</span>
-                            <span>v1.3.4</span>
+                            <span><i class=""></i> </span>
+                            <span><i class=""></i></span>
+                            <span>Top Pick</span>
                         </div>
-                        <a href="#" class="btn" onclick="downloadAPK()">Download APK</a>
+                        <a href="Mic.html" class="btn" onclick="BuyLink()">See Product</a>
                     </div>
                 </div>
-                
+
                 <div class="apk-card">
                     <div class="apk-img">
-                        <img src="Anyapp.jpeg".jpg" style="width:100%">
+                        <img src="".jpg" style="width:100%">
                     </div>
                     <div class="apk-content">
-                        <h3>Any Browser</h3>
-                        <p>There is a type of app which does not save history if you search anything.</p>
+                        <h3>xxxxxxxxxxxxxxxxxxxxx</h3>
+                        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
                         <div class="apk-meta">
-                            <span><i class="fas fa-download"></i> 78 MB</span>
-                            <span><i class="fas fa-star"></i> 4.6/5</span>
-                            <span>v2.5.0</span>
+                            <span><i class=""></i> 7</span>
+                            <span><i class=""></i> </span>
+                            <span></span>
                         </div>
                         <a href="Anya.html" class="btn" onclick="downloadAPK()">Download APK</a>
                     </div>
@@ -446,15 +445,15 @@
                 
                 <div class="apk-card">
                     <div class="apk-img">
-                        <img src="chatgpt.jpeg".jpg" style="width:100%">
+                        <img src="".jpg" style="width:100%">
                     </div>
                     <div class="apk-content">
-                        <h3>Chat gpt</h3>
-                        <p>Safety starts with understanding how developers collect and share your data.</p>
+                        <h3>xxxxxxxxxxxxxxxxxxxx</h3>
+                        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
                         <div class="apk-meta">
-                            <span><i class="fas fa-download"></i> 23.56 MB</span>
-                            <span><i class="fas fa-star"></i> 4.5</span>
-                            <span>v1.3.4</span>
+                            <span><i class=""></i> </span>
+                            <span><i class=""></i> </span>
+                            <span></span>
                         </div>
                         <a href="https://play.google.com/store/apps/details?id=com.openai.chatgpt" class="btn" onclick="downloadAPK()">Download App</a>
                     </div>
@@ -482,7 +481,7 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="sapk.html" class="active">SApk</a></li>
+                        <li><a href="Creator-store" class="active">Creator Store</a></li>
                         <li><a href="blog.html" target="_blank">blog</a></li>
                     </ul>
                 </div>
@@ -492,7 +491,6 @@
                     <ul class="footer-links">
                         <li><a href="edition.html" target="_blank">Edition Tools</a></li>
                         <li><a href="ai-edit.html" target="_blank">AI Editing</a></li>
-                        <li><a href="sapk.html">SApk</a></li>
                         <li><a href="contact.html" target="_blank">Contact Us</a></li>
                     </ul>
                 </div>
@@ -528,5 +526,3 @@
     </script>
 </body>
 </html>
-
-
