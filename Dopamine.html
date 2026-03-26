@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="icon" type="image/png"
+    sizes="32*32" href="sa.jpeg">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Creator - Dopamine Song 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo a {
+            text-decoration: none !important;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo-text span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 8px 5px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        nav ul li a.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Main Content */
+        main {
+            min-height: calc(100vh - 200px);
+            padding: 40px 0;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: var(--shadow);
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: green;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: var(--primary);
+            margin-left: 10px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary);
+            box-shadow: 0 6px 15px rgba(74, 111, 165, 0.3);
+        }
+        
+        /* Post Content Area */
+        .post-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+        
+        .post-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .post-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .post-meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .post-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .post-content h2 {
+            color: var(--primary);
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(74, 111, 165, 0.1);
+        }
+        
+        .post-content h3 {
+            color: var(--secondary);
+            margin: 25px 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .post-content p {
+            margin-bottom: 20px;
+        }
+        
+        .post-content ul, .post-content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .post-content li {
+            margin-bottom: 10px;
+        }
+        
+        .prompt-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        /* Featured Posts */
+        .featured-posts {
+            margin-top: 60px;
+        }
+        
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .post-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .post-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .post-card-img {
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .post-card-content {
+            padding: 25px;
+        }
+        
+        .post-card-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .post-card-content p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            min-height: 60px;
+        }
+        
+        .post-card-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.85rem;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #b0b7c3;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #b0b7c3;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .post-header h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .hero {
+                padding: 40px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .post-container {
+                padding: 25px;
+            }
+            
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-column {
+                min-width: 100%;
+                padding-right: 0;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 10px;
+                display: block;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .post-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .post-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="https://saeditz.in">
+                        <i class="logo-icon">SA</i>
+                        <span class="logo-text">Sumit <span>Creator</span></span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Capcut.html" >CapCut Template</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="edition.html">Editing</a></li>
+                        <li><a href="ai-edit.html">AI Edit</a></li>
+                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Hero Section -->
+            <div class="hero">
+                <h1>Welcome to Sumit Creator</h1>
+            </div>
+            
+            <!-- Recent Post -->
+            <div class="post-container">
+                <div class="post-header">
+
+                    <img src="Capd.png" style="width:100%">
+                    <h1>Dopamine Song CapCut Template 2026 | CapCut Template-</h1>
+                    <a href="Capcut.html" class="btn" target="_blank" style="margin-top: 15px;">CapCut Template</a>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> March 25, 2026</span>
+                        <span><i class="far fa-user"></i> Sumit Creator</span>
+                        <span><i class="far fa-clock"></i> 5 min read</span>
+                    </div>
+                </div>
+                
+                <div class="post-content">
+                    <p>Dopamine Song Capcut Template - Today's artical is going to be special for those who upload reels with various editing teach to grow their Insta 
+                        gram account. or, more simply, upload Trending video created using the CapCut Template and Vn Template.
+                    </p>
+                    <h2>Complete Information This Template</h2>
+                    <p>in this video we saw that the halo blur effact initially appears for about a second. Then, a shake effect appears, and the halo blur effect is applied again. The video  remains in slow motin. Our video then cuts out from the bottom and comes up through the animation to match the video of the main track. 
+                        This happens two-three times. Then, a flash effect and a shake effect appear. our video cuts again, maching the main track. Once again, a shake effect appears, making our video appear in slightly slow motion. The lyrics of the song have mached this effect. Because the beats of the song Dopamine are different.
+                         We have applied all transitions and video effact accordingly. it is not necessary to record a video to create a viral video. You can also use photos. The video to be made will have to be recorded in small clips From different angles so that the video becomes perfect. Whenever you upload a video on instagram, upload it with Dopamine song as background music.</p>
+                        <div class="post-meta">
+                            <a href="Capcut.html" class="btn" target="_blank" style="margin-top: 15px;">New CapCut Template</a></div>
+                    <div class="post-meta">
+                        <span><h1>Opamine CapCut Template</h1></span></div>
+                        <img src="Capdo.jpeg" style="width:100%">
+                        <div class="post-meta">
+                            </spam><a href="" class="btn" target="_blank" style="margin-top: 15px;">Check Template</a></span></div>
+                    <h2>Create A Dopamine Song Video reels Using Capcut Temlate -</h2>
+                            <p>It's very - very easy to create same type of video using Capcut template. Just make sure you use the letest version of capcut when using Capcut template.
+                                Have your video clip ready with the temlate you want to create the video. In this artical, we have uplode a photo of the capcut tempalete related to Dopamine song.
+                                We give the tempalete just below it. Let's learn stap by stap  how to make a video using it.
+                            </p>
+                            <ol>
+                                <li>Site Me Click Check template</li>
+                                <li>The capcut app open directly.</li>
+                                <li>The preview video of the given template will start playing there.</li>
+                                <li>You wiil find a button named Use Template blue color.</li>
+                                <li>Click on it and add all your video clips from the gallery.</li>
+                                <li>After doing this, click on Next and wait for some time.</li>
+                                <li>Your Video will be ready.</li>
+                                <li>Save the video by clicking on the Export button at the top right.</li>
+                            </ol>
+                    <h2>What Kind Of Video Should We Record?</h2>
+                            <p>To create a reels video on Dopamine Song using this viral template, you should record your video in short clip. do not record from just one angle. 
+                                Try different Camera angles and avoid length of around five seconds. To make your video using an editing app. For exampel adjust the background colour of your outfit,
+                                 and make your face a smooth white. If recording a video isa'n possible but you still want to follow this viral trend you can create a video using photo instead of video.
+                                So Let's learn in the next paragraph how to use the templaet and create a video on Dopamine Song by adding all your video clips into it.
+                            </p>
+
+                    <div class="post-meta">
+                            <a href="Gost Ai.html" target="_blank" style="margin-top: 15px;">Gost Ai Prompt</a></div>
+
+                    <H1>Conclusion</H1>
+                        <p>Friends, today's article is special for those who like video editing Because in this article we have givene a tempalete to creat a viral video releted to Capcut app. A video related to the song dopamin is currently Trending on instagram. 
+                            We have given a tempalete to make it in less time. So go ahead and create a video using Dopamine Song Capcut Template 2026. If you are fecing any problem while meking the video Feel free to ask us in the content us section. If you want to see videos related to editing Join us on instagram and Telegram.
+                        </p>
+                    <h1>FAQ ?</h1>
+                        <h3>1. What Are CapCut Tempaletes?</h3>
+                            <p>Ans. - CapCut provides pre-desined Video tempaletes that alredy include evrythink built in, such as transition, video effact, filters music, etc.
+                            </p>
+                        <h3>2. How Edit Capcut Tempaletes?</h3>
+                            <p></p>To edit the template first open it and add all the video and photo clips to it then click the Next button. There you'll find a button labeled Edit More. Click the scissors icon to edit.</h3>
+                            </p>
+                            <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.card {
+    width: 400px;
+    margin: 50px auto;
+    border: 2px solid black;
+    text-align: center;
+    padding: 30px;
+    background: white;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #00bcd4;
+    object-fit: cover;
+}
+
+h2 {
+    color: #2b6cb0;
+    margin-top: 15px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+</style>
+
+</head>
+<body>
+                    <div class="card">
+                        <!-- Image yaha change karo -->
+                        <img src="my.jpeg" class="profile-img">
+
+                    <!-- Apna naam -->
+                        <h2>Sumit Yadav</h2>
+
+                    <!-- Description -->
+                    <p>
+                        I’ve been editing photos and videos for over 5 years. Here, I share Lightroom Presets, AI Photo Editing Prompts, VN Templates, and easy editing tutorials so you can give your photos and videos a professional look. Welcome to the world of creative, high-quality editing.
+                    </p>
+            </div>
+            <!-- Featured Posts -->
+            <div class="featured-posts">
+                <h2 style="text-align: center; color: var(--primary); margin-bottom: 30px; font-size: 2rem;">More Articles</h2>
+                
+                <div class="posts-grid">
+                    <div class="post-card">
+                        <div class="post-card-img">
+                            <img src="Gcam.jpg" style="width:100%">
+                        </div>
+                        <div class="post-card-content">
+                            <h3>
+                                    <a href="Camera.html">
+                                    Gcam Camera App And Config Files | Gcam Camera Config File</a></h3>
+                            <p>Gcam Camera App And Config Files – Hello dear friend my is Sumit and welcome to our website Sumit Creator. Friends, a few days ago we told you all about the LMC 8.4 app…</p>
+                            <div class="post-card-meta">
+                                <span><i class="far fa-calendar"></i> Jan 31, 2026</span>
+                                <span><i class="far fa-eye"></i> 1.2K views</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post-card">
+                        <div class="post-card-img">
+                            <img src="Any.jpeg" style="width:100%">
+                        </div>
+                        <div class="post-card-content">
+                            <h3>
+                                    <a href="Any.html">
+                                        Any Browser App download | Privacy Catch Browser:-</a></h3>
+                            <p>Hello Dear Friend’s How Know Any Browser App A No History Catch App And I Am A Sumit Yadav Welcom To My Site Sumit Creator Read And Download…</p>
+                            <div class="post-card-meta">
+                                <span><i class="far fa-calendar"></i> Jan 5, 2024</span>
+                                <span><i class="far fa-eye"></i> 2.5K views</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post-card">
+                        <div class="post-card-img">
+                            <img src="Gost.jpeg" style="width:100%">
+                        </div>
+                        <div class="post-card-content">
+                            <h3>
+                                    <a href="Gost Ai.html">
+                                    Chatgpt Ghost Ai Photo Editing Prompts | Ghost Prompt</a></h3>
+                            <p>Chatgpt Ghost Ai Photo Editing Prompts – Friends, a new and amazing trend is currently going viral on social media....</p>
+                            <div class="post-card-meta">
+                                <span><i class="far fa-calendar"></i> Dec 28, 2023</span>
+                                <span><i class="far fa-eye"></i> 3.1K views</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sumit Creator</h3>
+                    <p>Providing innovative tools and resources for developers, creators, and tech enthusiasts worldwide.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1AYTT3xhUh/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/block_user631"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/sumit_creator_1m/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@sumitray631?si=DIAG6qNRsIStJmoR"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sapk.html" target="_blank">SApk</a></li>
+                        <li><a href="Blog.html" target="_blank">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="edition.html" target="_blank">Editing Tools</a></li>
+                        <li><a href="ai-edit.html" target="_blank">AI Editing</a></li>
+                        <li><a href="sapk.html" target="_blank">APK Collection</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">sumitcreator143@gmail.com</a></li>
+                        <li><a href="#">+91 62070 79956</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="Terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Sumit Creator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
